@@ -1,0 +1,40 @@
+parameters:
+    thenbsp.wechat.access_token.class: Thenbsp\Wechat\Wechat\AccessToken
+    thenbsp.wechat.jsapi.class: Thenbsp\Wechat\Wechat\Jsapi
+    thenbsp.wechat.qrcode.class: Thenbsp\Wechat\Wechat\Qrcode
+    thenbsp.wechat.serverip.class: Thenbsp\Wechat\Wechat\ServerIp
+    thenbsp.wechat.shorturl.class: Thenbsp\Wechat\Wechat\ShortUrl
+    thenbsp.wechat.oauth_client.class: Thenbsp\Wechat\OAuth\Client
+    thenbsp.wechat.oauth_qrcode.class: Thenbsp\Wechat\OAuth\Qrcode
+
+services:
+
+    thenbsp.wechat.access_token:
+        class: "%thenbsp.wechat.access_token.class%"
+        arguments: ["%thenbsp.wechat_appid%", "%thenbsp.wechat_appsecret%"]
+
+    thenbsp.wechat.jsapi:
+        class: "%thenbsp.wechat.jsapi.class%"
+        arguments: ["@thenbsp.wechat.access_token"]
+
+    thenbsp.wechat.qrcode:
+        class: "%thenbsp.wechat.qrcode.class%"
+        arguments: ["@thenbsp.wechat.access_token"]
+
+    thenbsp.wechat.serverip:
+        class : "%thenbsp.wechat.serverip.class%"
+        arguments: ["@thenbsp.wechat.access_token"]
+
+    thenbsp.wechat.shorturl:
+        class: "%thenbsp.wechat.shorturl.class%"
+        arguments: ["@thenbsp.wechat.access_token"]
+
+    thenbsp.wechat.oauth_client:
+        class: "%thenbsp.wechat.oauth_client.class%"
+        arguments: ["%thenbsp.wechat_appid%", "%thenbsp.wechat_appsecret%"]
+
+    thenbsp.wechat.oauth_qrcode:
+        class: "%thenbsp.wechat.oauth_qrcode.class%"
+        arguments: ["%thenbsp.wechat_appid%", "%thenbsp.wechat_appsecret%"]
+
+

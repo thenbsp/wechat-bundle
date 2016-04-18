@@ -1,0 +1,3 @@
+thenbsp_wechat:
+    path:     /
+    defaults: { _controller: ThenbspWechatBundle:Default:index }
