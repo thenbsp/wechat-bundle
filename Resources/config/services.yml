@@ -36,5 +36,3 @@ services:
     thenbsp.wechat.oauth_qrcode:
         class: "%thenbsp.wechat.oauth_qrcode.class%"
         arguments: ["%thenbsp.wechat_appid%", "%thenbsp.wechat_appsecret%"]
-
-

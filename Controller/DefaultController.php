@@ -19,6 +19,6 @@ class DefaultController extends Controller
 
         dump(get_defined_vars());
 
-        return new Response();
+        return new Response('<body></body>');
     }
 }
