@@ -3,7 +3,7 @@ Wechat Bundle for Symfony3
 
 ### configuration
 
-```
+```php
 // ./app/config/config.yml
 
 thenbsp_wechat:
