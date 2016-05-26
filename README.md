@@ -1,5 +1,5 @@
 # wechat-bundle
-Wechat Bundle for Symfony3
+Wechat Bundle for Symfony3 based [thenbsp/wechat](https://github.com/thenbsp/wechat)
 
 ### configuration
 
@@ -12,7 +12,7 @@ thenbsp_wechat:
         appsecret: "your appsecret"
 ```
 
-### use doctrine cache dirver
+### use doctrine cache driver
 
 ```php
 // ./app/config/config.yml
